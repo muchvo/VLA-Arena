@@ -337,12 +337,12 @@ vla_arena_suites = [
     'generalization_unseen_objects',
     # Other benchmarks
     'long_horizon',
-    # # Libero benchmarks
-    # "libero_10",
-    # "libero_90",
-    # "libero_spatial",
-    # "libero_object",
-    # "libero_goal",
+    # Libero benchmarks
+    'libero_10',
+    'libero_90',
+    'libero_spatial',
+    'libero_object',
+    'libero_goal',
 ]
 
 # Map suite names to problem folders
@@ -363,12 +363,12 @@ suite_to_problem_folder = {
     'generalization_unseen_objects': 'generalization_unseen_objects',
     # Other benchmarks
     'long_horizon': 'long_horizon',
-    # # Libero benchmarks
-    # "libero_10": "libero_10",
-    # "libero_90": "libero_90",
-    # "libero_spatial": "libero_spatial",
-    # "libero_object": "libero_object",
-    # "libero_goal": "libero_goal",
+    # Libero benchmarks
+    'libero_10': 'libero_10',
+    'libero_90': 'libero_90',
+    'libero_spatial': 'libero_spatial',
+    'libero_object': 'libero_object',
+    'libero_goal': 'libero_goal',
 }
 
 task_maps = {}
@@ -617,12 +617,12 @@ benchmark_names = [
     'generalization_unseen_objects',
     # Other benchmarks
     'long_horizon',
-    # # Libero benchmarks
-    # "libero_10",
-    # "libero_90",
-    # "libero_spatial",
-    # "libero_object",
-    # "libero_goal",
+    # Libero benchmarks
+    'libero_10',
+    'libero_90',
+    'libero_spatial',
+    'libero_object',
+    'libero_goal',
 ]
 
 # Create and register all benchmark classes
@@ -650,12 +650,12 @@ if __name__ == '__main__':
         'generalization_unseen_objects',
         # Other benchmarks
         'long_horizon',
-        # # LIBERO benchmarks
-        # "libero_10",
-        # "libero_90",
-        # "libero_spatial",
-        # "libero_object",
-        # "libero_goal",
+        # LIBERO benchmarks
+        'libero_10',
+        'libero_90',
+        'libero_spatial',
+        'libero_object',
+        'libero_goal',
     ]
 
     print('Testing all VLA Arena benchmarks:')

@@ -32,6 +32,7 @@ from robosuite.utils.observables import Observable, sensor
 from robosuite.utils.placement_samplers import SequentialCompositeSampler
 from robosuite.utils.transform_utils import mat2quat
 
+from .libero_on_the_ground_panda import LiberoOnTheGroundPanda
 from .mounted_panda import MountedPanda
 from .on_the_ground_panda import OnTheGroundPanda
 
@@ -50,5 +51,6 @@ ROBOT_CLASS_MAPPING.update(
     {
         'MountedPanda': FixedBaseRobot,
         'OnTheGroundPanda': FixedBaseRobot,
+        'LiberoOnTheGroundPanda': FixedBaseRobot,
     },
 )
