@@ -879,7 +879,8 @@ class BDDLBaseDomain(SingleArmEnv):
             # Sample from the placement initializer for all objects
             for object_property_initializer in self.object_property_initializers:
                 if isinstance(object_property_initializer, OpenCloseSampler) or isinstance(
-                    object_property_initializer, TurnOnOffSampler
+                    object_property_initializer,
+                    TurnOnOffSampler,
                 ):
                     joint_pos = object_property_initializer.sample()
                     self.object_states_dict[object_property_initializer.name].set_joint(joint_pos)

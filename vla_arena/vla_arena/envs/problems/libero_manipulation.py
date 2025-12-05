@@ -194,7 +194,7 @@ class Libero_Coffee_Table_Manipulation(BDDLBaseDomain):
         for camera in camera_names:
             if camera == 'robot0_eye_in_hand':
                 continue
-            elif camera == 'agentview':
+            if camera == 'agentview':
                 mujoco_arena.set_camera(
                     **AGENTVIEW_CONFIG[self.workspace_name],
                     pos_offset=camera_configs[camera],
@@ -401,7 +401,7 @@ class Libero_Floor_Manipulation(BDDLBaseDomain):
         for camera in camera_names:
             if camera == 'robot0_eye_in_hand':
                 continue
-            elif camera == 'agentview':
+            if camera == 'agentview':
                 mujoco_arena.set_camera(
                     **AGENTVIEW_CONFIG[self.workspace_name],
                     pos_offset=camera_configs[camera],
@@ -600,7 +600,7 @@ class Libero_Kitchen_Tabletop_Manipulation(BDDLBaseDomain):
         for camera in camera_names:
             if camera == 'robot0_eye_in_hand':
                 continue
-            elif camera == 'agentview':
+            if camera == 'agentview':
                 mujoco_arena.set_camera(
                     **AGENTVIEW_CONFIG[self.workspace_name],
                     pos_offset=camera_configs[camera],
@@ -811,7 +811,7 @@ class Libero_Living_Room_Tabletop_Manipulation(BDDLBaseDomain):
         for camera in camera_names:
             if camera == 'robot0_eye_in_hand':
                 continue
-            elif camera == 'agentview':
+            if camera == 'agentview':
                 mujoco_arena.set_camera(
                     **AGENTVIEW_CONFIG[self.workspace_name],
                     pos_offset=camera_configs[camera],
@@ -1020,7 +1020,7 @@ class Libero_Study_Tabletop_Manipulation(BDDLBaseDomain):
         for camera in camera_names:
             if camera == 'robot0_eye_in_hand':
                 continue
-            elif camera == 'agentview':
+            if camera == 'agentview':
                 mujoco_arena.set_camera(
                     **AGENTVIEW_CONFIG[self.workspace_name],
                     pos_offset=camera_configs[camera],

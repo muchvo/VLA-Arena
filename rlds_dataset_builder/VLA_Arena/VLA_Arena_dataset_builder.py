@@ -57,7 +57,8 @@ def _generate_examples(paths) -> Iterator[Tuple[str, Any]]:
                         'image': images[i][::-1, ::-1],
                         'wrist_image': wrist_images[i][::-1, ::-1],
                         'state': np.asarray(
-                            np.concatenate((states[i], gripper_states[i]), axis=-1), np.float32
+                            np.concatenate((states[i], gripper_states[i]), axis=-1),
+                            np.float32,
                         ),
                         'joint_state': np.asarray(joint_states[i], dtype=np.float32),
                     },
@@ -68,7 +69,7 @@ def _generate_examples(paths) -> Iterator[Tuple[str, Any]]:
                     'is_last': i == (actions.shape[0] - 1),
                     'is_terminal': i == (actions.shape[0] - 1),
                     'language_instruction': command,
-                }
+                },
             )
 
         # create output data sample
@@ -140,7 +141,7 @@ class VLAArena(MultiThreadedDatasetBuilder):
                                         dtype=np.float32,
                                         doc='Robot joint angles.',
                                     ),
-                                }
+                                },
                             ),
                             'action': tfds.features.Tensor(
                                 shape=(7,),
@@ -170,17 +171,17 @@ class VLAArena(MultiThreadedDatasetBuilder):
                             'language_instruction': tfds.features.Text(
                                 doc='Language Instruction.',
                             ),
-                        }
+                        },
                     ),
                     'episode_metadata': tfds.features.FeaturesDict(
                         {
                             'file_path': tfds.features.Text(
                                 doc='Path to the original data file.',
                             ),
-                        }
+                        },
                     ),
-                }
-            )
+                },
+            ),
         )
 
     def _split_paths(self):

@@ -136,7 +136,13 @@ def parse_examples_from_generator(paths, fcn, split_name, total_num_examples, fe
 
 class ParallelSplitBuilder(split_builder_lib.SplitBuilder):
     def __init__(
-        self, *args, split_paths, parse_function, n_workers, max_paths_in_memory, **kwargs
+        self,
+        *args,
+        split_paths,
+        parse_function,
+        n_workers,
+        max_paths_in_memory,
+        **kwargs,
     ):
         super().__init__(*args, **kwargs)
         self._split_paths = split_paths
@@ -176,7 +182,9 @@ class ParallelSplitBuilder(split_builder_lib.SplitBuilder):
         del generator  # use parallel generators instead
         paths = self._split_paths[split_name]
         path_lists = chunk_max(
-            paths, self._n_workers, self._max_paths_in_memory
+            paths,
+            self._n_workers,
+            self._max_paths_in_memory,
         )  # generate N file lists
         print(f'Generating with {self._n_workers} workers!')
         pool = Pool(processes=self._n_workers)
